@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/Albertoocbs/push_swap">
-    <img src="https://github.com/Albertoocbs/push_swap/blob/main/image%20pushswap.png?raw=true" width="100"/>
+    <img src="https://github.com/Albertoocbs/push_swap/blob/main/image%20pushswap.png?raw=true" width="110"/>
   </a>
 </p>
 
