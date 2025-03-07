@@ -11,7 +11,7 @@ The purpose is a project that teaches you about sorting algorithms and minimizin
 ---
 **Status**
 
-Finished: 2025-03-21. Grade: 100/100.
+Finished: 2025-03-14. Grade: 100/100.
 
 -------
 **Overview**
