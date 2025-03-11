@@ -6,7 +6,7 @@
 #    By: aoutumur <aoutumur@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/05 15:01:40 by aoutumur          #+#    #+#              #
-#    Updated: 2025/03/07 11:48:52 by aoutumur         ###   ########.fr        #
+#    Updated: 2025/03/10 17:00:17 by aoutumur         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS = $(SRC_DIR)/main.c \
        $(SRC_DIR)/reverse_rotate.c \
        $(SRC_DIR)/utils.c \
        $(SRC_DIR)/sort_tiny.c \
-       $(SRC_DIR)/push_swap.c
+       $(SRC_DIR)/sort.c
 
 OBJS = $(SRCS:.c=.o)
 
