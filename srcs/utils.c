@@ -6,7 +6,7 @@
 /*   By: aoutumur <aoutumur@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 10:52:04 by aoutumur          #+#    #+#             */
-/*   Updated: 2025/03/05 16:16:45 by aoutumur         ###   ########.fr       */
+/*   Updated: 2025/03/10 17:23:53 by aoutumur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,26 @@ void	free_stack(t_list *stack)
 		stack = stack->next;
 		free(tmp);
 	}
+}
+
+void	free_all_stacks(t_swap *tab)
+{
+	if (tab)
+	{
+		if (tab->stack_a)
+			free_stack(tab->stack_a);
+		if (tab->stack_b)
+			free_stack(tab->stack_b);
+		free(tab);
+	}
+}
+
+void	check_and_exit(t_swap *tab, char **args, int argc)
+{
+	if (argc == 2)
+		exit_error(tab, args);
+	else
+		exit_error(tab, NULL);
 }
 
 /*exit_error function*/

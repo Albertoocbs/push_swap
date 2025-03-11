@@ -6,7 +6,7 @@
 /*   By: aoutumur <aoutumur@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 11:21:46 by aoutumur          #+#    #+#             */
-/*   Updated: 2025/03/07 11:53:57 by aoutumur         ###   ########.fr       */
+/*   Updated: 2025/03/11 11:26:10 by aoutumur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,52 +53,55 @@ int	check_sorted(t_list *stack)
 	Case 5 : [3, 1, 2] ra
 	Case 6 : [3, 2, 1] sa et rra
 */
-void	sort_3nbr(t_swap *tab)
+void	sort_3nbr(t_list **stack)
 {
 	int	num1;
 	int	num2;
 	int	num3;
 
-	num1 = tab->stack_a->valeur;
-	num2 = tab->stack_a->next->valeur;
-	num3 = tab->stack_a->next->next->valeur;
-	if (check_sorted(tab->stack_a))
+	num1 = (*stack)->valeur;
+	num2 = (*stack)->next->valeur;
+	num3 = (*stack)->next->next->valeur;
+	if (ft_list_size(*stack) < 3 || check_sorted(*stack))
 		return ;
 	else if (num1 > num2 && num1 < num3)
-		swap_sa(tab->stack_a);
+		swap_sa(stack);
 	else if (num1 < num2 && num2 > num3 && num1 < num3)
 	{
-		swap_sa(tab->stack_a);
-		rotate_ra(tab->stack_a);
+		swap_sa(stack);
+		rotate_ra(stack);
 	}
 	else if (num1 < num2 && num2 > num3 && num1 > num3)
-		rev_rotate_rra(tab->stack_a);
+		rev_rotate_rra(stack);
 	else if (num1 > num2 && num2 < num3 && num1 > num3)
-		rotate_ra(tab->stack_a);
+		rotate_ra(stack);
 	else if (num1 > num2 && num2 > num3)
 	{
-		swap_sa(tab->stack_a);
-		rev_rotate_rra(tab->stack_a);
+		swap_sa(stack);
+		rev_rotate_rra(stack);
 	}
 }
+
 /*
 Check if is sorted calling check_sorted function
 if index is one of the two smallest then push to stack_b, otherwise,
 rotate until we push both, then when stack_a has just 3 elements call sort_3nbr
 and then push back from stac_b to stack_a the indexes min2 and min1
 */
-void	sort_5nbr(t_swap *tab)
+void	sort_5nbr(t_list **stack_a, t_list **stack_b)
 {
-	if (check_sorted(tab->stack_a))
+	if (check_sorted(*stack_a))
 		return ;
-	while (ft_list_size(tab->stack_a) > 3)
+	while (ft_list_size(*stack_a) > 3)
 	{
-		if (tab->stack_a->index == 0 || tab->stack_a->index == 1)
-			pb(tab);
+		if ((*stack_a)->index == 0 || (*stack_a)->index == 1)
+			push_pb(stack_a, stack_b);
 		else
-			ra(tab);
+			rotate_ra(stack_a);
 	}
-	sort_3nbr(tab);
-	pa(tab);
-	pa(tab);
+	sort_3nbr(stack_a);
+	if ((*stack_b)->index < (*stack_b)->next->index)
+		swap_sb(stack_b);
+	push_pa(stack_a, stack_b);
+	push_pa(stack_a, stack_b);
 }

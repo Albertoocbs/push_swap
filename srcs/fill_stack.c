@@ -6,7 +6,7 @@
 /*   By: aoutumur <aoutumur@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 10:52:00 by aoutumur          #+#    #+#             */
-/*   Updated: 2025/03/05 16:16:14 by aoutumur         ###   ########.fr       */
+/*   Updated: 2025/03/10 17:24:02 by aoutumur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,4 +70,24 @@ t_list	*fill_stack(char **args)
 		i++;
 	}
 	return (stack);
+}
+
+void	assign_index(t_list *stack)
+{
+	t_list	*current;
+	t_list	*temp;
+
+	current = stack;
+	while (current)
+	{
+		current->index = 0;
+		temp = stack;
+		while (temp)
+		{
+			if (current->valeur > temp->valeur)
+				current->index++;
+			temp = temp->next;
+		}
+		current = current->next;
+	}
 }

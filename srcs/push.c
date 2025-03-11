@@ -6,7 +6,7 @@
 /*   By: aoutumur <aoutumur@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 10:51:56 by aoutumur          #+#    #+#             */
-/*   Updated: 2025/03/05 16:16:23 by aoutumur         ###   ########.fr       */
+/*   Updated: 2025/03/10 17:24:00 by aoutumur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	push(t_list **src_stack, t_list **dest_stack)
 {
 	t_list	*tmp;
 
-	if (*src_stack == NULL)
+	if (!src_stack || !*src_stack)
 		return ;
 	tmp = *src_stack;
 	*src_stack = (*src_stack)->next;
