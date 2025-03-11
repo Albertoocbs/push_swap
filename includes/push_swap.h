@@ -6,7 +6,7 @@
 /*   By: aoutumur <aoutumur@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 10:52:10 by aoutumur          #+#    #+#             */
-/*   Updated: 2025/03/11 11:36:11 by aoutumur         ###   ########.fr       */
+/*   Updated: 2025/03/11 12:26:42 by aoutumur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ void	check_and_exit(t_swap *tab, char **args, int argc);
 /*-----------Sort Handler Functions-----------*/
 int		check_sorted(t_list *stack);
 void	sort_3nbr(t_list **stack);
+void	sort_4nbr(t_list **stack_a, t_list **stack_b);
 void	sort_5nbr(t_list **stack_a, t_list **stack_b);
 int		ft_list_size(t_list *stack);
 
