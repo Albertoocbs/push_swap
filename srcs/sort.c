@@ -6,7 +6,7 @@
 /*   By: aoutumur <aoutumur@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 10:51:47 by aoutumur          #+#    #+#             */
-/*   Updated: 2025/03/11 11:34:16 by aoutumur         ###   ########.fr       */
+/*   Updated: 2025/03/11 12:28:40 by aoutumur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,9 @@ void	sort_stack(t_swap *tab)
 		swap_sa(&tab->stack_a);
 	else if (size == 3)
 		sort_3nbr(&tab->stack_a);
-	else if (size == 4 || size == 5)
+	else if (size == 4)
+		sort_4nbr(&tab->stack_a, &tab->stack_b);
+	else if (size == 5)
 		sort_5nbr(&tab->stack_a, &tab->stack_b);
 	else
 		radix_sort(&tab->stack_a, &tab->stack_b);
