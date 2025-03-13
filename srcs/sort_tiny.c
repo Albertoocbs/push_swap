@@ -6,7 +6,7 @@
 /*   By: aoutumur <aoutumur@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 11:21:46 by aoutumur          #+#    #+#             */
-/*   Updated: 2025/03/11 12:27:23 by aoutumur         ###   ########.fr       */
+/*   Updated: 2025/03/13 13:48:07 by aoutumur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void	sort_3nbr(t_list **stack)
 void	sort_4nbr(t_list **stack_a, t_list **stack_b)
 {
 	if (check_sorted(*stack_a))
-		return;
+		return ;
 	while (ft_list_size(*stack_a) > 3)
 	{
 		if ((*stack_a)->index == 0)

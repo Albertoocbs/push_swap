@@ -6,7 +6,7 @@
 /*   By: aoutumur <aoutumur@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 10:51:47 by aoutumur          #+#    #+#             */
-/*   Updated: 2025/03/11 12:28:40 by aoutumur         ###   ########.fr       */
+/*   Updated: 2025/03/13 13:48:07 by aoutumur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 static int	get_max_bits(t_list *stack)
 {
 	int		max;
-	int		max_bits ;
+	int		max_bits;
 	t_list	*tmp;
 
 	tmp = stack;

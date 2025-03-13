@@ -6,7 +6,7 @@
 /*   By: aoutumur <aoutumur@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 10:22:06 by aoutumur          #+#    #+#             */
-/*   Updated: 2025/03/10 17:24:01 by aoutumur         ###   ########.fr       */
+/*   Updated: 2025/03/13 14:03:18 by aoutumur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ static int	is_number(char *s)
 }
 
 /* 	has_duplicates:
-*   Checks if the argument list has duplicate numbers.
-*   Return: 1 if a duplicate is found, 0 if there are none.
-*/
+ *   Checks if the argument list has duplicate numbers.
+ *   Return: 1 if a duplicate is found, 0 if there are none.
+ */
 static int	has_duplicates(char **args)
 {
 	int	i;
@@ -65,10 +65,10 @@ static int	has_duplicates(char **args)
 }
 
 /* 	is_correct_input:
-*   Checks if the given arguments are all numbers, without duplicates
-*	& within INT_MIN, INT_MAX
-*   Return: 1 if the arguments are valid, 0 if not.
-*/
+ *   Checks if the given arguments are all numbers, without duplicates
+ *	& within INT_MIN, INT_MAX
+ *   Return: 1 if the arguments are valid, 0 if not.
+ */
 int	is_correct_input(char **args)
 {
 	int		i;
@@ -81,7 +81,7 @@ int	is_correct_input(char **args)
 			return (0);
 		num = ft_atol(args[i]);
 		if (num < INT_MIN || num > INT_MAX)
-			exit_error(NULL, NULL);
+			return (0);
 		i++;
 	}
 	if (has_duplicates(args))

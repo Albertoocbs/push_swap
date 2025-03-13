@@ -6,7 +6,7 @@
 /*   By: aoutumur <aoutumur@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 10:51:50 by aoutumur          #+#    #+#             */
-/*   Updated: 2025/03/10 17:23:57 by aoutumur         ###   ########.fr       */
+/*   Updated: 2025/03/13 13:48:06 by aoutumur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 #include "ft_printf/ft_printf.h"
 
 /*
-* The top element of the stack is sent to the bottom
-*/
+ * The top element of the stack is sent to the bottom
+ */
 static void	rotate(t_list **stack)
 {
 	t_list	*tmp;

@@ -6,7 +6,7 @@
 /*   By: aoutumur <aoutumur@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 10:52:00 by aoutumur          #+#    #+#             */
-/*   Updated: 2025/03/10 17:24:02 by aoutumur         ###   ########.fr       */
+/*   Updated: 2025/03/13 13:48:02 by aoutumur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,9 @@ void	ft_add_node_back(t_list **stack, t_list *new_node)
 }
 
 /*
-fill_stack rempli la pile A avec les nombres validés
- va convertir le tableau de chaînes en une liste chaînée de type t_list,
- en respectant l'ordre (le 1er nombre doit correspondre au sommet de la pile).
+fill_stack fills stack A with the validated numbers
+will convert the string array into a linked list of type t_list,
+respecting the order (the first number must correspond to the top of the stack).
 returns stack, which is a pointer to the head of the lnkd list
 representing the stack */
 t_list	*fill_stack(char **args)
